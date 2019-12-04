@@ -1,0 +1,19 @@
+{
+  "name": "searchinarray",
+  "version": "1.0.0",
+  "description": "this package for search an element in array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "search",
+    "array",
+    "javascript",
+    "search",
+    "in",
+    "array"
+  ],
+  "author": "Milad E. Fahmy",
+  "license": "ISC"
+}
