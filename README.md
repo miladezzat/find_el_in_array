@@ -27,7 +27,7 @@ After install package
 1. Examples for simple array:
 ```js
 //example 1
-const DE_Duplicated = require('de_duplicated')
+const find_el_in_array = require('find_el_in_array')
 ```
 
 ## Running the tests
