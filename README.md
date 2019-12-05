@@ -1,4 +1,4 @@
-# Find Element In Array [![npm version][![Build Status](https://travis-ci.org/miladezzat/find_el_in_array.svg?branch=master)](https://travis-ci.org/miladezzat/find_el_in_array)
+# Find Element In Array [![Build Status](https://travis-ci.org/miladezzat/find_el_in_array.svg?branch=master)](https://travis-ci.org/miladezzat/find_el_in_array)
 
 This is package  for deleting the duplicated elements in array, there are contain two methods, first method called simpleArray, this method de_duplicated the simple elements just numbers or strings or both, and second method is complexArray the de_duplicated object elements in array  
 
