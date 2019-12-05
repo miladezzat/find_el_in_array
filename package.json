@@ -1,23 +1,34 @@
 {
-    "name": "find_el_in_array",
-    "version": "1.0.0",
-    "description": "this package for search an element in array",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha tests/*.*"
-    },
-    "keywords": [
-        "search",
-        "array",
-        "javascript",
-        "search",
-        "in",
-        "array"
-    ],
-    "author": "Milad E. Fahmy",
-    "license": "ISC",
-    "dependencies": {
-        "chai": "^4.2.0",
-        "mocha": "^6.2.2"
-    }
+  "name": "find_el_in_array",
+  "version": "1.0.0",
+  "description": "this package for search an element in array",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.*"
+  },
+  "keywords": [
+    "search",
+    "array",
+    "javascript",
+    "search",
+    "in",
+    "array"
+  ],
+  "author": "Milad E. Fahmy",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladezzat/find_el_in_array.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miladezzat/find_el_in_array/issues"
+  },
+  "homepage": "https://github.com/miladezzat/find_el_in_array#readme"
 }
