@@ -1,5 +1,5 @@
 {
-    "name": "searchinarray",
+    "name": "find_el_in_array",
     "version": "1.0.0",
     "description": "this package for search an element in array",
     "main": "index.js",
