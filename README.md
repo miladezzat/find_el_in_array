@@ -4,21 +4,20 @@ search in array
 
 ## Getting Started
 
-download the package in your prject and require it, and use it
+This is an npm package for search in array
 
 ### Prerequisites
 
 you should have node.js in your local machine
 
-```
-no examples
-```
-
 ### Installing
 
-open terminale and go to your project directory and write
-``` shell
-    $ npm i find_el_in_array
+``` bash
+    npm i find_el_in_array
+    
+    //OR
+
+    yarn add find_el_in_array
 ```
 
 ### How To Use it
@@ -26,39 +25,36 @@ After install package
 
 1. Examples for simple array:
 ```js
-//example 1
-const find_el_in_array = require('find_el_in_array')
+
+const FindElementInArray = require('find_el_in_array');
+
+//OR
+
+import FindElementInArray from 'find_el_in_array';
+
+
+const findElementInArray = new FindElementInArray();
+
+//simple array
+    const testArray = [
+      'milad', 'ezzat', 'fahmy', 1, 5, 8,
+    ];
+    const searchItem = 8;
+
+const result = findElementInArray.searchInSimpleArray(testArray, searchItem);
+// return 8
+
+// complex array
+
+  const testArray = [
+    { id: 1, name: 'milad', age: 24 },
+    { id: 2, name: 'ezzat', age: 24 },
+    { id: 4, name: 'Milad', age: 24 },
+    { id: 3, name: 'Fahym', age: 24 },
+  ];
+const result = searchInArray.searchInComplexArray(testArray, 'id', 4);
+// return { id: 4, name: 'Milad', age: 24 }
 ```
-
-## Running the tests
-
-### Break down into end to end tests
-
-
-```
-Not now an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [JavaScript](https://developer.mozilla.org/ar/docs/Web/JavaScript)
-
-## Contributing
-
-## Versioning
-
 ## Authors
 
 * **Milad E. Fahmy** - *Initial work* - [Milad E. Fahmy](https://github.com/miladezzat/)
@@ -66,7 +62,5 @@ Add additional notes about how to deploy this on a live system
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/miladezzat/find_el_in_array/blob/development/LICENCE) file for details
 
