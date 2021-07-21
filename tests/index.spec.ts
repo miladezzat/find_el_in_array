@@ -64,7 +64,7 @@ describe('#Array of object elements', () => {
   // noKey is not property in any object of array
   it('sent array of objects and searchItem 1 and key blabla return blabla isn`t propery in any object of array', () => {
     expect(searchInArray.searchInComplexArray(testArray, 'blabla', 1))
-      .to.equal('blabla is not propery in any object of array');
+      .to.equal('blabla is not property in any object of array');
   });
 
   // not founded in array
