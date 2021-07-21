@@ -2,9 +2,6 @@
   "name": "find_el_in_array",
   "version": "1.0.0",
   "description": "This package for search an element in array",
-  "repository": {
-    "url": "https://github.com/khaledosama999/binary-heap.js"
-  },
   "main": "./build/index.js",
   "module": "./build/index.js",
   "files": [
@@ -15,7 +12,7 @@
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "build": "rollup -c",
-    "git-cz": "./node_modules/.bin/git-cz",
+    "git-cz": "git-cz",
     "husky": "husky init",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -34,19 +31,12 @@
     "find element in array",
     "array in javascript"
   ],
-  "author": {
-    "name": "Milad E. Fahmy <miladezzat>",
-    "email": "miladezzat.f@gmail.com",
-    "url": "https://github.com/miladezzat"
-  },
+  "author": "Milad E. Fahmy <miladezzat> (https://github.com/miladezzat)",
   "contributors": [
-    {
-      "name": "Milad E. Fahmy <miladezzat>",
-      "email": "miladezzat.f@gmail.com",
-      "url": "https://github.com/miladezzat"
-    }
+    "Milad E. Fahmy <miladezzat> (https://github.com/miladezzat)"
   ],
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.0",
     "@types/chai": "^4.2.15",
@@ -77,5 +67,16 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miladezzat/find_el_in_array.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miladezzat/find_el_in_array/issues"
+  },
+  "homepage": "https://github.com/miladezzat/find_el_in_array#readme"
 }

@@ -1,68 +1,68 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 class FindElementInArray {
-    constructor(parameters) {
+    private isKey = (array:any, key:string) => {
+      // eslint-disable-next-line no-prototype-builtins
+      const newKey:any[] = array.filter((element:object) => element.hasOwnProperty(key));
 
+      if (newKey.length === 0) {
+        return false;
+      }
+
+      return true;
     }
-    private isKey = (array, key) => {
-        let newKey = array.filter(element => {
-            return element.hasOwnProperty(key)
+
+    public searchInSimpleArray = (array:any[], searchItem:any) => {
+      let result;
+
+      if (typeof searchItem === 'number') {
+        result = array.find((el) => {
+          if (typeof el === 'number') {
+            if (searchItem === el) return el;
+          }
         });
 
-        if (newKey.length === 0) {
-            return false
-        };
+        if (typeof result === 'undefined') {
+          return `${searchItem} not found`;
+        }
 
-        return true
+        return result;
+      } if (typeof searchItem === 'string') {
+        result = array.find((el) => {
+          if (typeof el === 'string') {
+            if (searchItem.toLowerCase() === el.toLowerCase()) return el;
+          }
+        });
+
+        if (typeof result === 'undefined') {
+          return `${searchItem} not found`;
+        }
+
+        return result;
+      }
     }
 
-    public searchInSimpleArray = (array, searchItem) => {
-        let result;
+    public searchInComplexArray = (array:any[], key:string, searchItem:any) => {
+      let newArray: any[];
 
-        if (typeof searchItem === 'number') {
-            result = array.find(el => {
-                if (typeof el === "number") {
-                    if (searchItem == el) return el;
-                }
-            })
-            if (typeof result === "undefined") {
-                return `${searchItem} not found`
-            }
-            return result
-        } else if (typeof searchItem === 'string') {
-            result = array.find(el => {
-                if (typeof el === "string") {
-                    if (searchItem.toLowerCase() == el.toLowerCase()) return el;
-                }
-            })
-            if (typeof result === "undefined") {
-                return `${searchItem} not found`
-            }
-            return result
-        }
-    }
+      if (!this.isKey(array, key)) return `${key} is not property in any object of array`;
 
-    public searchInComplexArray = (array, key, searchItem) => {
-        let newArray: any[];
+      if (typeof searchItem === 'number') {
+        newArray = array.find((el) => {
+          if (el[key] === searchItem) return el;
+        });
+      } else if (typeof searchItem === 'string') {
+        newArray = array.find((el) => {
+          if (typeof el[key] === 'string' && searchItem.toLowerCase() === el[key].toLowerCase()) return el;
+        });
+      } else {
+        return `You sent ${searchItem} type of  (${typeof searchItem}) as a search item`;
+      }
 
-        if (!this.isKey(array, key)) return key + " is not property in any object of array"
+      if (typeof newArray === 'undefined') return `${searchItem} not founded in array`;
 
-
-        if (typeof searchItem === 'number') {
-            newArray = array.find(el => {
-                if (el[key] === searchItem) return el;
-            })
-        } else if (typeof searchItem === 'string') {
-            newArray = array.find(el => {
-                if (typeof el[key] === 'string' &&
-                    searchItem.toLowerCase() == el[key].toLowerCase()) return el;
-            })
-        } else {
-            return `You sent ${searchItem} type of  (${typeof searchItem}) as a search item`
-        }
-        if (typeof newArray === 'undefined') return searchItem + " not founded in array"
-        return newArray
-
+      return newArray;
     }
 }
-
 
 export default FindElementInArray;

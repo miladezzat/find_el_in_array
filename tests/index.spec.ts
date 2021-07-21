@@ -1,6 +1,8 @@
 import { assert, expect } from 'chai';
 
-import searchInArray from '../index';
+import FindElementInArray from '../src/index';
+
+const searchInArray = new FindElementInArray();
 
 describe('searchInSimpleArray method', () => {
   describe('#Array of numbers element', () => {
@@ -37,6 +39,7 @@ describe('searchInSimpleArray method', () => {
     const testArray = [
       'milad', 'ezzat', 'fahmy', 1, 5, 8,
     ];
+
     it(`sent array[ ${[...testArray]} ]and searchItem ezzat should result equal ezzat`, () => {
       assert.equal(searchInArray.searchInSimpleArray(testArray, 'ezzat'), 'ezzat');
     });
@@ -46,19 +49,22 @@ describe('searchInSimpleArray method', () => {
   });
 });
 
-const testArray = [
-  { id: 1, name: 'milad', age: 24 },
-  { id: 2, name: 'ezzat', age: 24 },
-  { id: 3, name: 'Fahym', age: 24 },
-  { id: 4, name: 'Milad', age: 24 },
-];
 describe('#Array of object elements', () => {
+  const testArray = [
+    { id: 1, name: 'milad', age: 24 },
+    { id: 2, name: 'ezzat', age: 24 },
+    { id: 3, name: 'Fahym', age: 24 },
+    { id: 4, name: 'Milad', age: 24 },
+  ];
+
   it('sent array of objects and searchItem 1 and key id return {id:1, name:\'milad\', age: 24}', () => {
     expect(searchInArray.searchInComplexArray(testArray, 'id', 1)).to.eql({ id: 1, name: 'milad', age: 24 });
   });
-  // nokey is not propery in any object of array
-  it('sent array of objects and searchItem 1 and key blabla return blabla is not propery in any object of array ', () => {
-    expect(searchInArray.searchInComplexArray(testArray, 'blabla', 1)).to.equal('blabla is not propery in any object of array');
+
+  // noKey is not property in any object of array
+  it('sent array of objects and searchItem 1 and key blabla return blabla isn`t propery in any object of array', () => {
+    expect(searchInArray.searchInComplexArray(testArray, 'blabla', 1))
+      .to.equal('blabla is not propery in any object of array');
   });
 
   // not founded in array
